@@ -116,7 +116,7 @@ function ResponsiveAppBar() {
                             {context.settings.workingImageData.data ? "ReSave" : "Save"}
                         </Button>}
 
-                        <Button 
+                        <Button
                             variant="contained" color="error"
                             onClick={() => {
                                 axios.get('/api/delete/' + context.settings.workingImageData.file,
@@ -160,6 +160,9 @@ function ResponsiveAppBar() {
                                                         setModalopen(false)
                                                     }}>
                                                     <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%' }}>
+                                                        <Typography>
+                                                            {idx+1}.
+                                                        </Typography>
                                                         <Typography>
                                                             {value.file}
                                                         </Typography>

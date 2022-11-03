@@ -124,8 +124,8 @@ def delete_data(image):
     # print(request.get_json())
     # mydata = json.loads(request.get_data())
     file_name = image.split('.')[0]
-    os.remove(os.path.join(DATA_DIR, file_name+'.json'))
+    # os.remove(os.path.join(DATA_DIR, file_name+'.json'))
     return ('Deleted',200)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True,host='0.0.0.0')
