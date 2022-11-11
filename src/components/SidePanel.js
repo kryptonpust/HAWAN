@@ -67,7 +67,11 @@ export default function SidePanel(props) {
 
                         return (
                             <Chip draggable
-                                onDragStart={(e) => { e.dataTransfer.setData("drop_info", value); }}
+                                onDragStart={(e) => { 
+                                    console.log(e)
+                                    e.target.style.backgroundColor = 'salmon';
+                                    e.dataTransfer.setData("drop_info", value); 
+                                }}
                                 key={index}
                                 id={labelId}
                                 label={value}
