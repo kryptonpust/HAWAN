@@ -40,6 +40,6 @@ for filePath in tqdm(os.listdir(JSON_DIR)):
                     im1.save(os.path.join(WODRS_DIR,localFolder,f"{fileName}{wordDict[label]}.png"))
                 except:
                     continue
-                
-                
+
+
 
