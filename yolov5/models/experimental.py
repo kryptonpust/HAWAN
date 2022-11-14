@@ -82,9 +82,9 @@ def attempt_load(weights, device=None, inplace=True, fuse=True):
         # Model compatibility updates
         if not hasattr(ckpt, 'stride'):
             ckpt.stride = torch.tensor([32.])
-        if hasattr(ckpt, 'names') and isinstance(ckpt.names, (list, tuple)):
-            ckpt.names = dict(enumerate(ckpt.names))  # convert to dict
-
+        # if hasattr(ckpt, 'names') and isinstance(ckpt.names, (list, tuple)):
+            # ckpt.names = dict(enumerate(ckpt.names))  # convert to dict
+            
         model.append(ckpt.fuse().eval() if fuse and hasattr(ckpt, 'fuse') else ckpt.eval())  # model in eval mode
 
     # Module compatibility updates
